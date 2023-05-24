@@ -24,6 +24,19 @@ func (s ReportStatus) String() string {
 	}
 }
 
+func ParseReportStatus(s string) ReportStatus {
+	switch s {
+	case "Pending":
+		return ReportStatusPending
+	case "Reviewing":
+		return ReportStatusReviewing
+	case "Resolved":
+		return ReportStatusResolved
+	default:
+		return ReportStatusUnknown
+	}
+}
+
 type Report struct {
 	ReportID  string
 	UserID    string
