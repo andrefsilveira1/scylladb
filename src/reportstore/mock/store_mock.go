@@ -5,7 +5,7 @@
 package mock
 
 import (
-	reportstore "github.com/amin-mir/reporting/reportstore"
+	reportstore "src/reportstore"
 	gomock "github.com/golang/mock/gomock"
 	reflect "reflect"
 )

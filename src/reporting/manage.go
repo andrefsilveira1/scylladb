@@ -1,8 +1,9 @@
 package reporting
 
 import (
-	"github.com/amin-mir/reporting/reportstore"
-	"github.com/amin-mir/reporting/uuid"
+	"src/reportstore"
+
+	"src/uuid"
 )
 
 type ReportManager struct {
