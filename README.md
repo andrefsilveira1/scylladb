@@ -28,6 +28,16 @@ Notice that you will have to change **YOUR_HOST_HERE** by the host and the serve
 Now, just have fun with **INSERT** and **SELECT** querys. Remember to run **USE reporting;**, this will able you to use the keyspace defined.
 
 
+# Next steps:
+
+- Refactor the code
+- Create a .env file and get env by functions
+- Implement efficient ways for querys
+- Learn and use Network Topology Strategy
+- Apply differents replication factor
+- ...
+
+
 
 # References:
 
