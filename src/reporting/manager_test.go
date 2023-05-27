@@ -4,9 +4,12 @@ import (
 	"errors"
 	"testing"
 
-	reportstore "github.com/amin-mir/reporting/reportstore"
-	mockreportstore "github.com/amin-mir/reporting/reportstore/mock"
-	mockuuid "github.com/amin-mir/reporting/uuid/mock"
+	reportstore "src/reportstore"
+
+	mockreportstore "src/reportstore/mock"
+
+	mockuuid "src/uuid/mock"
+
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
