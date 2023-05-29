@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 
-	"src/config"
+	"src/preload"
 
 	scylla "src/scyllaDB"
 
@@ -13,14 +13,14 @@ import (
 func main() {
 	ctx := context.Background()
 
-	config, err := config.LoadEnv()
+	env, err := preload.Load()
 	if err != nil {
 		panic(err)
 	}
 
-	manager := scylla.CreateManager(config)
+	manager := scylla.CreateManager(env)
 
-	if err = manager.CreateKeySpace(config.ScyllaKeySpace); err != nil {
+	if err = manager.CreateKeySpace(env.Scyllakeyspace); err != nil {
 		panic(err)
 	}
 
@@ -29,7 +29,7 @@ func main() {
 		panic(err)
 	}
 
-	if err = migrate.Migrate(ctx, session, config.ScyllaMigrations); err != nil {
+	if err = migrate.Migrate(ctx, session, env.Scyllamigration); err != nil {
 		panic(err)
 	}
 }

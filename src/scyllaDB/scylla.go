@@ -1,19 +1,19 @@
 package scyllaDB
 
 import (
-	"src/config"
+	"src/preload"
 
 	"github.com/gocql/gocql"
 	"github.com/scylladb/gocqlx/v2"
 )
 
 type Manager struct {
-	cfg config.Config
+	cfg preload.Env
 }
 
-func CreateManager(cfg config.Config) *Manager {
+func CreateManager(env preload.Env) *Manager {
 	return &Manager{
-		cfg: cfg,
+		cfg: env,
 	}
 }
 
@@ -24,11 +24,11 @@ func (m *Manager) connect(keyspace string, host []string) (gocqlx.Session, error
 }
 
 func (m *Manager) Connect() (gocqlx.Session, error) {
-	return m.connect(m.cfg.ScyllaKeySpace, m.cfg.ScyllaHost)
+	return m.connect(m.cfg.Scyllakeyspace, m.cfg.Scyllahost)
 }
 
 func (m *Manager) CreateKeySpace(keyspace string) error {
-	sessions, err := m.connect("system", m.cfg.ScyllaHost)
+	sessions, err := m.connect("system", m.cfg.Scyllahost)
 	if err != nil {
 		return err
 	}

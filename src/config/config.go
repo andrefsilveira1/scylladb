@@ -1,6 +1,8 @@
 package config
 
-import "github.com/kelseyhightower/envconfig"
+import (
+	"github.com/kelseyhightower/envconfig"
+)
 
 type Config struct {
 	ScyllaHost       []string `envconfig:"SCYLLA_HOST"`
