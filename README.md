@@ -18,10 +18,15 @@ In this case, a container called "scylla" was created.
 Check out the host and the port connected by cqlsh
 
 
-## Second, run the migration:
-`SCYLLA_HOST=YOUR_HOST_HERE SCYLLA_KEYSPACE=reporting SCYLLA_MIGRATIONS=migrations go run exec/migration/main.go`
+## Second, define your environment variables in .env file:
+- SCYLLA_HOST=localhost (notice that you will have to change for your host)
+- SCYLLA_KEYSPACE=reporting
+- SCYLLA_MIGRATIONS=migrations
 
-Notice that you will have to change **YOUR_HOST_HERE** by the host and the server returned by cqlsh command.
+
+### Run:
+In the folder src, run:
+`go run exec/migration/main.go`
 
 ## Have fun!
 
