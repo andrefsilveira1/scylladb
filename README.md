@@ -40,7 +40,7 @@ Now, just have fun with **INSERT** and **SELECT** querys. Remember to run **USE 
 - Implement efficient ways for querys
 - Learn and use Network Topology Strategy
 - Apply differents replication factor
-- ...
+- Make this repository a ease setup for ScyllaDB connection with docker image of scylla
 
 
 
