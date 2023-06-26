@@ -44,6 +44,3 @@ Now, just have fun with **INSERT** and **SELECT** querys. Remember to run **USE 
 
 
 
-# References:
-
-Using tutorial of Amin-mir: https://github.com/amin-mir/reporting
